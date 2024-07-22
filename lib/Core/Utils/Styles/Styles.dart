@@ -7,7 +7,7 @@ abstract class Styles {
       TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700);
 
   static const TextStyle style20 =
-      TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w300);
+      TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600);
   static const TextStyle style24 =
       TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w600);
 

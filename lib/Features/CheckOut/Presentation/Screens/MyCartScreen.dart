@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../Core/Utils/Styles/Styles.dart';
+import '../../../Widgets/custom_AppBar.dart';
 import 'MyCartScreenBody.dart';
 
 class MyCartScreen extends StatelessWidget {
@@ -7,18 +7,11 @@ class MyCartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      appBar: AppBar(
-          centerTitle: true,
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          leading: const Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.black,
-          ),
-          title: const Text('My Cart',
-              textAlign: TextAlign.center, style: Styles.style25)),
-              body:const MyCartScreenBody(),
+    return Scaffold(
+      appBar: BuildAppBar(title: "My Cart"),
+      body: const MyCartScreenBody(),
     );
   }
+
+   
 }

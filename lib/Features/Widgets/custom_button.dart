@@ -15,16 +15,16 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 58,
-        width: double.infinity,
+        height: 55,
+        width: 198,
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: const Color.fromARGB(255, 153, 85, 64),
           borderRadius: BorderRadius.circular(25),
         ),
         child: Center(
             child: Text(
           buttonName,
-          style: Styles.style24,
+          style: Styles.style20,
         )),
       ),
     );
