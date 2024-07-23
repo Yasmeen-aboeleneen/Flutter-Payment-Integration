@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_payments/Features/Widgets/custom_credit_card.dart';
 import 'package:flutter_payments/Features/Widgets/payment_methods.dart';
 
 class PaymentDetailsBody extends StatelessWidget {
@@ -7,7 +8,9 @@ class PaymentDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [PaymentMethods()],
+      children: [PaymentMethods(),
+      CustomCreditCard()
+      ],
     );
   }
 }
