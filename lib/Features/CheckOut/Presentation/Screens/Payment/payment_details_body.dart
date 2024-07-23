@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_payments/Features/CheckOut/Presentation/Screens/LastView/last_Screen.dart';
 import 'package:flutter_payments/Features/Widgets/custom_button.dart';
 import 'package:flutter_payments/Features/Widgets/custom_credit_card.dart';
 import 'package:flutter_payments/Features/Widgets/payment_methods.dart';
@@ -37,6 +38,11 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
                     } else {
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});
+
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return const LastScreen();
+                      }));
                     }
                   }),
             )))
