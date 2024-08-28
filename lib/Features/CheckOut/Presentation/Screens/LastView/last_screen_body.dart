@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_payments/Features/Widgets/custom_check_item.dart';
+import 'package:flutter_payments/Features/Widgets/custom_dashed_line.dart';
+import 'package:flutter_payments/Features/Widgets/thank_you_card.dart';
 
 class LastScreenBody extends StatelessWidget {
   const LastScreenBody({super.key});
@@ -8,31 +11,12 @@ class LastScreenBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: Stack(clipBehavior: Clip.none, children: [
-        Container(
-          width: 350,
-          height: 672,
-          decoration: ShapeDecoration(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20))),
-        ),
+        const ThankYouCard(),
         Positioned(
           bottom: MediaQuery.sizeOf(context).height * .2 + 20,
           left: 20 + 10,
           right: 20 + 10,
-          child: Row(
-            children: List.generate(
-                17,
-                (index) => Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2),
-                        child: Container(
-                          height: 4,
-                          color: Colors.brown,
-                        ),
-                      ),
-                    )),
-          ),
+          child: const CustomDashedLine(),
         ),
         Positioned(
             left: -20,
@@ -50,19 +34,7 @@ class LastScreenBody extends StatelessWidget {
           left: 0,
           right: 0,
           top: -50,
-          child: CircleAvatar(
-            radius: 50,
-            backgroundColor: Colors.white,
-            child: CircleAvatar(
-              radius: 44,
-              backgroundColor: Colors.brown,
-              child: Icon(
-                Icons.check_rounded,
-                size: 35,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          child: CustomCheckItem(),
         )
       ]),
     );
