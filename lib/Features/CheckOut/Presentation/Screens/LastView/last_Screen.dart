@@ -7,6 +7,7 @@ class LastScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.brown,
       resizeToAvoidBottomInset: false,
       body: LastScreenBody(),
     );
