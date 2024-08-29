@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_payments/Core/Constants/colors.dart';
 import 'package:flutter_payments/Core/Utils/Styles/Styles.dart';
+import 'package:flutter_payments/Features/Widgets/cardInfoWidget.dart';
 import 'package:flutter_payments/Features/Widgets/payment_info.dart';
+import 'package:flutter_payments/Features/Widgets/total_Price.dart';
 
 class ThankYouCard extends StatelessWidget {
   const ThankYouCard({
@@ -49,7 +51,16 @@ class ThankYouCard extends StatelessWidget {
             PaymentInfo(
               value: 'To',
               title: 'Ayla',
-            )
+            ),
+            Divider(
+              height: 60,
+              thickness: 2,
+            ),
+            TotalPrice(value: r'$50.59', title: 'Total'),
+            SizedBox(
+              height: 30,
+            ),
+            CardInfoWidget()
           ],
         ),
       ),
