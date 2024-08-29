@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_payments/Core/Constants/colors.dart';
 import 'package:flutter_payments/Core/Utils/Styles/Styles.dart';
+import 'package:flutter_payments/Features/Widgets/bottomWidget.dart';
 import 'package:flutter_payments/Features/Widgets/cardInfoWidget.dart';
 import 'package:flutter_payments/Features/Widgets/payment_info.dart';
 import 'package:flutter_payments/Features/Widgets/total_Price.dart';
@@ -19,48 +20,53 @@ class ThankYouCard extends StatelessWidget {
           color: kveryWhite,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-      child: const Padding(
-        padding: EdgeInsets.only(top: 50 + 16, left: 22, right: 22),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 50 + 16, left: 22, right: 22),
         child: Column(
           children: [
-            Text(
+            const Text(
               'Thank You',
               style: Styles.style25,
             ),
-            Text(
+            const Text(
               'Your Transaction was successful',
               style: Styles.style20,
             ),
-            SizedBox(
+            const SizedBox(
               height: 42,
             ),
-            PaymentInfo(
+            const PaymentInfo(
               title: 'Date',
               value: '12/10/2024',
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            PaymentInfo(
+            const PaymentInfo(
               value: 'Time',
               title: '10:15 pm',
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            PaymentInfo(
+            const PaymentInfo(
               value: 'To',
               title: 'Ayla',
             ),
-            Divider(
+            const Divider(
               height: 60,
               thickness: 2,
             ),
-            TotalPrice(value: r'$50.59', title: 'Total'),
-            SizedBox(
+            const TotalPrice(value: r'$50.59', title: 'Total'),
+            const SizedBox(
               height: 30,
             ),
-            CardInfoWidget()
+            const CardInfoWidget(),
+            const Spacer(),
+            const BottomWidget(),
+            SizedBox(
+              height: ((MediaQuery.sizeOf(context).height * .2 + 20 / 2)) - 29,
+            )
           ],
         ),
       ),
