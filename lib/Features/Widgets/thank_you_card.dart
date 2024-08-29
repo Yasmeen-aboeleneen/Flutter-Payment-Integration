@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_payments/Core/Constants/colors.dart';
 import 'package:flutter_payments/Core/Utils/Styles/Styles.dart';
 import 'package:flutter_payments/Features/Widgets/payment_info.dart';
 
@@ -13,7 +14,7 @@ class ThankYouCard extends StatelessWidget {
       width: double.infinity,
       height: 672,
       decoration: ShapeDecoration(
-          color: Colors.white,
+          color: kveryWhite,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       child: const Padding(
